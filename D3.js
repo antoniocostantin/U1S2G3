@@ -115,8 +115,10 @@ let charactersNames = [];
 */
 console.log(">>>>>>>Esercizio 2<<<<<<")
 
-
-
+for(let i = 0; i < starWarsCharacters.length; i++){
+  charactersNames[i] = starWarsCharacters.name[i];
+}
+console.log(charactersNames)
 
 
 /* ESERCIZIO 3
