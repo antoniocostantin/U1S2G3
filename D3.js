@@ -2,7 +2,7 @@ const starWarsCharacters = [
   {
     name: 'Luke Skywalker',
     height: 172,
-    mass: 277,
+    mass: 27,
     hair_color: 'blond',
     skin_color: 'fair',
     eye_color: 'blue',
@@ -12,7 +12,7 @@ const starWarsCharacters = [
   {
     name: 'C-3PO',
     height: 167,
-    mass: 75,
+    mass: 15,
     hair_color: 'n/a',
     skin_color: 'gold',
     eye_color: 'yellow',
@@ -52,7 +52,7 @@ const starWarsCharacters = [
   {
     name: 'Owen Lars',
     height: 178,
-    mass: 120,
+    mass: 10,
     hair_color: 'brown, grey',
     skin_color: 'light',
     eye_color: 'blue',
@@ -61,7 +61,7 @@ const starWarsCharacters = [
   },
   {
     name: 'Beru Whitesun lars',
-    height: 165,
+    height: 16,
     mass: 25,
     hair_color: 'brown',
     skin_color: 'light',
@@ -82,7 +82,7 @@ const starWarsCharacters = [
   {
     name: 'Biggs Darklighter',
     height: 183,
-    mass: 84,
+    mass: 8,
     hair_color: 'black',
     skin_color: 'light',
     eye_color: 'brown',
@@ -267,4 +267,4 @@ const randomSWC = starWarsCharacters[random];
 console.log(random);
 console.log(randomSWC);
 
-console.log("Ciao! Io sono " + starWarsCharacters[random].name + " ,sono un* " + starWarsCharacters[random].gender + " ,ho i capelli " + starWarsCharacters[random].hair_color + " ,gli occhi " + starWarsCharacters[random].eye_color + " ,la mia pelle e` di colore " + starWarsCharacters[random].skin_color + " ,sono alto " + starWarsCharacters[random].height + " ,peso " + starWarsCharacters[random].mass + " e sono nato nel " + starWarsCharacters[random].birth_year)
+console.log("Hi! I'm " + starWarsCharacters[random].name + " ,I'm a " + starWarsCharacters[random].gender + " ,I have " + starWarsCharacters[random].hair_color + " hair , " + starWarsCharacters[random].eye_color + " eys and " + starWarsCharacters[random].skin_color + " skin. I'm " + starWarsCharacters[random].height + " tall ,I weigh " + starWarsCharacters[random].mass + " kg. I was born in " + starWarsCharacters[random].birth_year)
