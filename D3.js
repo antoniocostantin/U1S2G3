@@ -267,4 +267,4 @@ const randomSWC = starWarsCharacters[random];
 console.log(random);
 console.log(randomSWC);
 
-console.log("Ciao! Io sono " + starWarsCharacters[random].name + " sono un* " + starWarsCharacters[random].gender + " ho i capelli " + starWarsCharacters[random].hair_color + " gli occhi " + starWarsCharacters[random].eye_color + ", la mia pelle e` di colore " + starWarsCharacters[random].skin_color + ". Sono alto " + starWarsCharacters[random].height + " peso " + starWarsCharacters[random].mass + " e sono nato nel " + starWarsCharacters[random].birth_year)
+console.log("Ciao! Io sono " + starWarsCharacters[random].name + " ,sono un* " + starWarsCharacters[random].gender + " ,ho i capelli " + starWarsCharacters[random].hair_color + " ,gli occhi " + starWarsCharacters[random].eye_color + " ,la mia pelle e` di colore " + starWarsCharacters[random].skin_color + " ,sono alto " + starWarsCharacters[random].height + " ,peso " + starWarsCharacters[random].mass + " e sono nato nel " + starWarsCharacters[random].birth_year)
