@@ -246,7 +246,25 @@ console.log(starWarsCharacters);
 */
 console.log(">>>>>>>Esercizio 9<<<<<<")
 
+for(let i=0; i<charactersNames.length; i++){
+  for(let j=0; j<femaleCharacters.length; j++){
+    if(charactersNames[i]===femaleCharacters[j]){
+      delete charactersNames[i];
+    }
+  }
+}
+
+console.log(charactersNames);
+console.log(charactersNames.length - femaleCharacters.length)
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
 console.log(">>>>>>>Esercizio 10<<<<<<")
+
+
+let random = Math.floor(Math.random() * starWarsCharacters.length);
+const randomSWC = starWarsCharacters[random];
+console.log(random);
+console.log(randomSWC);
+
+console.log("Ciao! Io sono " + starWarsCharacters[random].name + " sono un* " + starWarsCharacters[random].gender + " ho i capelli " + starWarsCharacters[random].hair_color + " gli occhi " + starWarsCharacters[random].eye_color + ", la mia pelle e` di colore " + starWarsCharacters[random].skin_color + ". Sono alto " + starWarsCharacters[random].height + " peso " + starWarsCharacters[random].mass + " e sono nato nel " + starWarsCharacters[random].birth_year)
