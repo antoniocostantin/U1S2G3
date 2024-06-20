@@ -22,7 +22,7 @@ const starWarsCharacters = [
   {
     name: 'R2-D2',
     height: 96,
-    mass: 32,
+    mass: 132,
     hair_color: 'n/a',
     skin_color: 'white, blue',
     eye_color: 'red',
@@ -52,7 +52,7 @@ const starWarsCharacters = [
   {
     name: 'Owen Lars',
     height: 178,
-    mass: 10,
+    mass: 190,
     hair_color: 'brown, grey',
     skin_color: 'light',
     eye_color: 'blue',
@@ -95,7 +95,7 @@ const starWarsCharacters = [
     mass: 77,
     hair_color: 'auburn, white',
     skin_color: 'fair',
-    eye_color: 'bluegray',
+    eye_color: "blue-gray",
     birth_year: '57BBY',
     gender: 'male',
   },
@@ -131,7 +131,7 @@ console.log(">>>>>>>Esercizio 3<<<<<<")
 const femaleCharacters = [];
 for (let i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender === 'female') {
-    femaleCharacters.push(starWarsCharacters[i].name);
+    femaleCharacters.push(starWarsCharacters[i]);
   }
 }
 console.log(femaleCharacters)
@@ -147,7 +147,7 @@ const eyeColor = {
   yellow: [],
   brown: [],
   red: [],
-  bluegray: []
+  "blue-gray": []
 }
 
 console.log(eyeColor)
@@ -180,9 +180,9 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
       eyeColor.red.push(starWarsCharacters[i].name);
       d++;
       break;
-    case starWarsCharacters[i].eye_color == "bluegray":
+    case starWarsCharacters[i].eye_color == "blue-gray":
       let e = 0;
-      eyeColor.bluegray.push(starWarsCharacters[i].name);
+      eyeColor["blue-gray"].push(starWarsCharacters[i].name);
       e++;
       break;
   }
@@ -218,11 +218,11 @@ console.log(">>>>>>>Esercizio 7<<<<<<")
 
 if(crewMass < 500){
   console.log("Ship is under loaded");
-} else if (crewMass > 500 && crewMass < 700){
+} else if (crewMass < 700){
   console.log("Ship is half loaded")
-} else if (crewMass > 700 && crewMass < 900){
+} else if (crewMass < 900){
   console.log("Warning: Load is over 700")
-} else if (crewMass > 900 && crewMass < 1000){
+} else if (crewMass < 1000){
   console.log("Critical Load: Over 900")
 } else { console.log("DANGER! OVERLOAD ALERT: escape from ship now!");}
 
@@ -233,7 +233,6 @@ console.log(">>>>>>>Esercizio 8<<<<<<")
 
 for(let i=0; i < starWarsCharacters.length; i++){
   if(starWarsCharacters[i].gender == "n/a"){
-    delete starWarsCharacters[i].gender;
     starWarsCharacters[i].gender = "robot";
   }
 }
@@ -246,16 +245,25 @@ console.log(starWarsCharacters);
 */
 console.log(">>>>>>>Esercizio 9<<<<<<")
 
-for(let i=0; i<charactersNames.length; i++){
-  for(let j=0; j<femaleCharacters.length; j++){
-    if(charactersNames[i]===femaleCharacters[j]){
-      delete charactersNames[i];
+const character = [];
+
+console.log('CHARACTERS BEFORE', charactersNames.length)
+
+for (let i = 0; i < charactersNames.length; i++) {
+  const character = charactersNames[i]
+
+  for (let j = 0; j < femaleCharacters.length; j++) {
+    const femCharacter = femaleCharacters[j]
+
+    if (femCharacter.name === charactersNames) {
+      console.log('FEMALE', character)
+      charactersNames.splice(i, 1)
     }
   }
 }
 
-console.log(charactersNames);
-console.log(charactersNames.length - femaleCharacters.length)
+console.log('CHARACTERS AFTER', charactersNames.length)
+
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
